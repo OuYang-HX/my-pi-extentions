@@ -1,11 +1,12 @@
 # LLM Stats Extension
 
-Tracks LLM API request counts in pi-coding-agent footer.
+Tracks LLM API request counts in pi-coding-agent footer, while preserving all original token statistics.
 
 ## Features
 
 - **Request Count Tracking**: Counts each LLM API call
-- **Inline Footer Display**: Shows `Req:N` on the same line as token stats
+- **Preserves Original Stats**: Shows full token stats (↑ ↓ R W $ context%)
+- **Inline Footer Display**: Shows `Req:N` appended to existing stats
 - **Session Persistence**: Saves request count across sessions
 - **Commands**:
   - `/llm-stats` - Toggle display
@@ -14,10 +15,12 @@ Tracks LLM API request counts in pi-coding-agent footer.
 ## Display Example
 
 ```
-↑12 ↓104 R6.9k W6 $0.001 Req:42  model-name
+~/project (main) • my-session
+↑98k ↓1.9k R78k W4.3k $0.070 9.1%/205k (auto) Req:12  model-name (main)
 ```
 
-Req count is displayed inline with token statistics.
+The `Req:N` counter is appended to the right of the original stats line, replacing nothing.
+When no tokens exist yet (session just started), shows `?/205k (auto) Req:0`.
 
 ## Installation
 
