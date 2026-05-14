@@ -3,7 +3,6 @@
 Personal extensions for [pi-coding-agent](https://github.com/earendil-works/pi-coding-agent).
 
 **GitHub**: https://github.com/OuYang-HX/my-pi-extentions
-**Local path**: `~/my-pi-extentions/`
 **Installed extensions path**: `~/.pi/agent/extensions/`
 
 ## Extensions
